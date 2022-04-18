@@ -11,8 +11,9 @@ export default function Hero() {
             </p>
             <div>
                 <Button variant='dark' size='lg' className='me-3'>Add Items</Button>
-                <Button variant='primary' size='lg' className='text-light'>Explore</Button>
+                <Button variant='primary' size='lg' className='text-light' href='#auctions'>Explore</Button>
             </div>
+            <div className="bg"></div>
         </div>
     </React.Fragment>
   )
