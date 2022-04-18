@@ -1,0 +1,10 @@
+.hero{
+    flex-direction: column;
+    padding-top: 25vh;
+    height: 100vh;
+}
+
+.hero .welcome{
+    width: 50%;
+    margin-bottom: 2rem;
+}
