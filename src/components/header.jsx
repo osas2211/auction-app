@@ -1,7 +1,11 @@
 import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
+import AddNFT from './addItemForm'
 
 export default function Header() {
+  const [show, setShow] = React.useState(false)
+  const handleShow = ()=> setShow(true)
+  const handleClose = ()=> setShow(false)
   return (
     <div className='header'>
         <Navbar bg="light" expand="lg">
@@ -10,13 +14,14 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="#auctions">Explore</Nav.Link>
-                    <Nav.Link href="/">Add Item</Nav.Link>
+                    <Nav.Link href="#" onClick={handleShow}>Add NFTs</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
-            </Navbar>
+          </Navbar>
+          <AddNFT show={show} handleShow={handleShow} handleClose={handleClose}/>
     </div>
   )
 }
